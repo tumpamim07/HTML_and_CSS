@@ -3,9 +3,7 @@
 <h1>HTML AND CSS Documentation</h1>
 </div>
 <details>
-
-<summary>Day 01 (html Tags, Attribute)<summary>
-</details>
+<summary>Day 01 (html Tags & Attribute)</summary>
 
 -  
     ### 1. **Tags and Attributes**
@@ -247,3 +245,5 @@
     ### Output of Code:
     
     ![1](https://i.imgur.com/imjkpuM.png)
+
+</details>
