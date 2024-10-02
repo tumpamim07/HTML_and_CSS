@@ -504,3 +504,133 @@
     ### Output of Code: 
     ![1](https://i.imgur.com/N92Y1z3.png)
 </details>
+
+<details>
+    <summary>Day 03 (html Entity, Font style, Symbol & Emojis) </summary>
+
+- 
+    ### Description:
+    
+    1. **Bangla Writing:**
+        
+        ```html
+        <h4>শুভ রাত্রি</h4>
+        
+        ```
+        
+        - This line displays the text "শুভ রাত্রি" (meaning "Good Night" in Bengali) inside an `<h4>` heading tag, written using the **Avro keyboard** for typing Bengali.
+    2. **Entities:**
+        - Entities are used to display special characters in HTML that have reserved meanings. For example, `&lt;` is used to display `<` and `&gt;` to display `>`.
+        
+        ```html
+        <p>Hello &nbsp; &nbsp; &nbsp; Bangladesh</p>
+        &lt; hello &gt;<p>
+        &ltcc;Hi&gtcc;<p>
+        &DoubleVerticalBar; Bye Bye &DoubleVerticalBar;
+        <footer>&copy; Tumpa Moni Mim</footer>
+        
+        ```
+        
+        - `&nbsp;`: Adds non-breaking spaces between "Hello" and "Bangladesh".
+        - `&lt;` and `&gt;`: Displays the angle brackets `<` and `>` around the word "hello".
+        - `&copy;`: Displays the copyright symbol © followed by "Tumpa Moni Mim".
+        - `&DoubleVerticalBar;`: Displays the double vertical bar `‖`, used here in the phrase "Bye Bye".
+    3. **Symbols and Emoji:**
+        
+        ```html
+        &#9749;  <!-- Displays a coffee cup emoji ☕ -->
+        &#11093; <!-- Displays a heavy large circle emoji ⭕ -->
+        &#127803; <!-- Displays a sunflower emoji 🌻 -->
+        
+        ```
+        
+        - `&#9749;`: Displays the ☕ (coffee cup) emoji.
+        - `&#11093;`: Displays the ⭕ (heavy large circle) emoji.
+        - `&#127803;`: Displays the 🌻 (sunflower) emoji.
+    4. **Font Styling:**
+        
+        ```html
+        <p style="background-color: rgb(50, 49, 49); color: white; font-size: 28px; font-family: monospace;">Font Style</p>
+        
+        ```
+        
+        - This paragraph uses inline styling to apply specific font and background styles:
+            - `background-color: rgb(50, 49, 49)`: Sets the background color to a dark shade.
+            - `color: white`: Changes the text color to white.
+            - `font-size: 28px`: Makes the font size 28 pixels.
+            - `font-family: monospace`: Sets the font family to monospace, a fixed-width font where each character takes up the same amount of space.
+    
+    ---
+    
+    ### Entity Explanation:
+    
+    Entities are used in HTML to represent special characters that have a specific meaning in the markup language, preventing them from being interpreted as part of the code. Here are some of the entities used in the code:
+    
+    - ****: Represents a non-breaking space, useful for adding extra spaces between text without collapsing.
+    - **©**: Represents the copyright symbol `©`.
+    - **<**: Represents the less-than symbol `<`.
+    - **>**: Represents the greater-than symbol `>`.
+    - **∥**: Represents the double vertical bar symbol `‖`, used as a separator.
+    
+    ### Symbols & Emoji:
+    
+    HTML allows you to represent symbols and emoji using numeric character references, such as `&#9749;` for the ☕ (coffee cup) emoji. These are typically displayed as visual symbols across different platforms.
+    
+    ### Font Styling:
+    
+    Font styling controls the visual appearance of text. In the given code:
+    
+    - Background color (`background-color`) defines the background shade of the text.
+    - Text color (`color`) defines the color of the text itself.
+    - Font size (`font-size`) determines how large the text appears.
+    - Font family (`font-family`) sets the style of the text, with "monospace" providing equal space for each character, useful for readability in code or aligned text.
+    
+    **Sources for adding symbol, icons and emoji**
+    
+    - Unicode character website: [https://unicode-table.com/en/](https://unicode-table.com/en/)
+    - W3School emoji link: [https://www.w3schools.com/charsets/ref_emoji.asp](https://www.w3schools.com/charsets/ref_emoji.asp)
+    - iconfinder icon link: [https://www.iconfinder.com/](https://www.iconfinder.com/)
+    - Pick image from [unsplash](https://unsplash.com/)
+    - Choose color from
+        - [colorhunt](https://colorhunt.co/)
+        - [imagecolorpicker](https://imagecolorpicker.com/)
+        - [htmlcolorcodes](https://htmlcolorcodes.com/)
+    
+    ### Code Snippet:
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    
+        <!-- Bangla writing -->
+        <h4>শুভ রাত্রি</h4>
+    
+        <!-- entity -->
+        <p>Hello &nbsp; &nbsp; &nbsp; Bangladesh</p>
+        &lt; hello &gt;<p>
+        &ltcc;Hi&gtcc;<p>
+        &DoubleVerticalBar; Bye Bye &DoubleVerticalBar;
+        <footer>&copy; Tumpa Moni Mim</footer>
+    
+        <!-- symbol and emoji -->
+    
+        &#9749;
+        &#11093;
+        &#127803;
+    
+        <!-- font styling -->
+    
+        <p style="background-color: rgb(50, 49, 49); color: white; font-size: 28px; font-family: monospace;">Font Style</p>
+    </body>
+    </html>
+    
+    ``` 
+    ### Output of Code: 
+    ![1](https://i.imgur.com/h1ElZcO.png)
+</details>
