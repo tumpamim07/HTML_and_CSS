@@ -634,3 +634,208 @@
     ### Output of Code: 
     ![1](https://i.imgur.com/h1ElZcO.png)
 </details>
+<details>
+<summary>Day-04 (HTML List, Image & Iframe)</summary>
+   
+- 
+    ### **1. LISTS in HTML**
+    
+    HTML supports two main types of lists: Ordered and Unordered lists.
+    
+    ### **Ordered List (`<ol>`)**
+    
+    - **Description**: An ordered list is used to display items in a specific order. Each item in the list is numbered by default, but we can change the numbering style using attributes.
+    - **Attributes**:
+        - **start**: This attribute specifies the number (or letter) the list should start from. By default, ordered lists start at 1, but you can change it to any number or letter.
+        - **type**: This attribute changes the numbering style of the list. It can be:
+            - `1` for regular numbers (default).
+            - `a` for lowercase letters.
+            - `A` for uppercase letters.
+            - `i` for lowercase Roman numerals.
+            - `I` for uppercase Roman numerals.
+    - **Example**:
+        
+        ```html
+        <!--Regular Ordered List-->
+        <h2>Courses List</h2>
+        <ol>
+        	<li>Operating System</li>
+        	<li>Software Engineering</li>
+          <li>Graphics Design</li>
+        </ol>
+        
+        <!--Ordered List Starting at 4-->
+        <h2>Additional Courses List</h2>
+        <ol start="4">
+          <li>Theory of Computing</li>
+          <li>AI</li>
+          <li>Web3 Programming</li>
+        </ol>
+        
+        <!--Lowercase Letters-->
+        <h2>a Courses</h2>
+        <ol type="a">
+        	<li>Sociology</li>
+          <li>Psychology</li>
+        </ol>>
+        
+        <!--Uppercase Letters-->
+        <h2>A Courses</h2>
+        <ol type="A">
+        	<li>Physic</li>
+        	<li>Chemistry</li>
+        </ol>
+        
+        <h2>Roman Numerals</h2>
+        <ol type="I">
+          <li>Country</li>
+          <li>City</li>
+        </ol>
+        
+        ```
+        
+        In these examples:
+        
+        - The first list is a simple numbered list starting at 1.
+        - The second list starts numbering at 4 instead of 1.
+        - The third list uses lowercase letters (`a, b, c...`) instead of numbers.
+        - The fourth list uses uppercase letters ( `A, B, C...` ).
+        - The last list uses  Roman numerals (`I, II, III...`).
+    
+    ### **Unordered List (`<ul>`)**
+    
+    - **Description**: An unordered list is used when the order of items doesn’t matter. Instead of numbers, it uses bullets or other symbols to display each list item.
+    - **Attributes**:
+        - **type**: This attribute defines the bullet style for the list. It can be:
+            - `disc` for solid bullet points (default).
+            - `circle` for hollow circle bullets.
+            - `square` for square bullets.
+    - **Example**:
+        
+        ```html
+        <!--Regular Unordered List-->
+        <h2>Fruit</h2>
+        <ul>
+        	<li>Mango</li>
+        	<li>Guava</li>
+        </ul>
+        
+        <!--Circle Bullets-->
+        <h2>Color</h2>
+        <ul type="circle">
+        	<li>Red</li>
+        	<li>Purple</li>
+        </ul>
+        
+        <!--Square Bullets-->
+        <h2>Flower</h2>
+        <ul type="square">
+        	<li>Lavender</li>
+        	<li>Tulip</li>
+        </ul>
+        
+        ```
+        
+        In these examples:
+        
+        - The first list uses the default solid bullet.
+        - The second list uses hollow circle bullets.
+        - The third list uses square-shaped bullets.
+    
+    ---
+    
+    ### **2. IMAGE Tag (`<img>`)**
+    
+    The `<img>` tag is used to insert an image into your HTML document. It is a self-closing tag, which means it doesn't need a closing tag like `<img></img>`.
+    
+    - **Attributes**:
+        - **src**: Specifies the source of the image, either from your local files (e.g., `cat.jpg`) or from a web URL (e.g., `https://example.com/image.jpg`).
+        - **alt**: Provides alternative text that describes the image if it can't be displayed (useful for accessibility).
+        - **height** and **width**: Control the size of the image in pixels.
+        - **border**: Adds a border around the image. You can specify the width of the border in pixels.
+        - **title**: Displays a tooltip text when you hover over the image.
+        - **align**: Specifies the alignment of the image (e.g., `left`, `right`, `center`).
+        - **vspace**: Adds vertical spacing around the image (above and below).
+        - **hspace**: Adds horizontal spacing around the image (left and right).
+    - **Example**:
+        
+        ```html
+        <h2>Image with Border, Spacing, and Title</h2>
+         <img src="cat.jpg" alt="Cat" height="300px" width="400px" border="20px" title="Tumpa" align="left" hspace="20px" vspace="20px" >
+        
+        ```
+        
+        **Explanation**:
+        
+        - `src="cat.jpg"`: Loads an image named `cat.jpg` from the same folder.
+        - `alt="Cat"`: Displays this text if the image cannot be loaded.
+        - `height="300"` and `width="400"`: Sets the image size to 300x400 pixels.
+        - `border="20"`: Adds a 20-pixel wide border around the image.
+        - `title="Tumpa"`: Displays "Tumpa" when you hover over the image.
+        - `align="left"`: Aligns the image to the left side of the content.
+        - `hspace="20"` and `vspace="20"`: Adds 20px of space around the image horizontally and vertically.
+    
+    ---
+    
+    ### **3. IFRAME (`<iframe>`)**
+    
+    An iframe is used to embed other HTML documents or web content within your current webpage. It's like showing a mini browser window inside your page.
+    
+    - **Attributes**:
+        - **src**: Specifies the URL of the page or content to display inside the iframe.
+        - **height** and **width**: Set the height and width of the iframe in pixels.
+        - **frameborder**: Defines whether or not the iframe should have a border (`1` for yes, `0` for no).
+        - **allowfullscreen**: Allows the iframe to display content in full-screen mode (commonly used for videos).
+        - **referrerpolicy**: Specifies how much information about the current page is sent to the embedded content.
+    
+    ### **Embedding a YouTube Video**
+    
+    You can use an iframe to embed a YouTube video by specifying the video URL.
+    
+    - **Example**:
+        
+        ```html
+        <h2>Embedded YouTube Video</h2>
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/zsYMgmb2oCM?si=_bkWRcEtnom1lMef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        
+        ```
+        
+        **Explanation**:
+        
+        - `src="<https://www.youtube.com/embed/zsYMgmb2oCM?si=_bkWRcEtnom1lMef>"`: The link to the YouTube video you want to embed.
+        - `allowfullscreen`: Allows the user to view the video in full-screen mode.
+        - The other attributes control the size and behavior of the iframe.
+    
+    ### **Embedding a Website**
+    
+    You can also embed a webpage in an iframe.
+    
+    - **Example**:
+        
+        ```html
+        <h2>Embedded Prothom Alo Website</h2>
+        <iframe src="<https://www.prothomalo.com/>" frameborder="0" height="300" width="400">
+        </iframe>
+        
+        ```
+        
+        **Explanation**:
+        
+        - `src="<https://www.prothomalo.com/>"`: Embeds the homepage of the Prothom Alo website.
+        - The `frameborder="0"` removes the border around the iframe.
+        - `height="300"` and `width="400"` control the size of the iframe.
+    
+    ---
+    
+    ### **Summary**
+    
+    - **Lists**: HTML supports ordered (`<ol>`) and unordered (`<ul>`) lists. Ordered lists are numbered, while unordered lists use bullets.
+    - **Image Tag (`<img>`)**: This tag embeds images in your webpage. You can control the image size, add borders, and position it using attributes like `src`, `alt`, `height`, `width`, etc.
+    - **Iframe (`<iframe>`)**: Iframes are used to embed external content like websites or videos into your webpage. You can adjust the size and appearance using attributes like `src`, `height`, `width`, and `frameborder`.
+
+    ### Output of Code: 
+    ![1](https://i.imgur.com/Qjgar8a.png)
+    ![2](https://i.imgur.com/0rnO2AW.png)
+
+</details>
