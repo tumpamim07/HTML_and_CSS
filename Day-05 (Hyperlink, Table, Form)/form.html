@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form action="">
+        <div>
+            <label for="fullname">Username: </label>
+            <input type="text" name="username" id="username" required readonly>
+        </div>
+        <br>
+        <div>
+            <label for="fullname">Full Name: </label>
+            <input type="text" name="fullname" id="fullname" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" id="dob">
+        </div>
+        <br>
+        <div>
+            <label for="photo">Choose Your Photo: </label>
+            <input type="file" name="photo" id="photo">
+        </div>
+        <br>
+        <div>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" id="gender" value="male">Male
+            <input type="radio" name="gender" id="gender" value="female">Female
+        </div>
+        <br>
+        <div>
+            <label for="religion">Religion: </label>
+            <input checked type="checkbox" name="c1" id="muslim" value="muslim">Muslim
+            <input type="checkbox" name="c1" id="hindu" value="hindu">Hindu
+        </div>
+
+        <br>
+        <div>
+            <label for="department">Department: </label>
+            <select name="department" id="department">
+                <option value="CSE">CSE</option>
+                <option selected value="EEE">EEE</option>
+                <option value="LLB">LLB</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="message">Message</label>
+            <textarea cols="20" rows="10" name="message" id="message"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear" disabled>
+        </div>
+    </form>
+</body>
+</html>
