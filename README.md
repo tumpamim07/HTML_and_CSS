@@ -742,6 +742,42 @@
         - The second list uses hollow circle bullets.
         - The third list uses square-shaped bullets.
     
+    ### **Nested List**
+
+    A **nested list** is a list within another list, and it is represented in HTML using `<ul>` (unordered list) or `<ol>` (ordered list) tags. In this case, you used an unordered list `<ul>`. Each item in the list is marked by a bullet point.
+
+    - **Outer List**:
+    - The outer list has two main categories:
+        1. **Frontend Development**: Focuses on the development of the user interface (UI).
+        2. **Backend Development**: Handles the server-side, databases, and application logic.
+    - **Inner Lists**:
+    - **Frontend Development**:
+        - Contains three technologies:
+            1. **HTML**: The language used to structure the content on a webpage.
+            2. **CSS**: The styling language to design and layout web pages.
+            3. **JavaScript**: A programming language for adding interactivity.
+    - **Backend Development**:
+        - Contains two technologies for server-side development:
+            1. **Node.js**: A JavaScript runtime that allows server-side scripting.
+            2. **Express.js**: A web framework for Node.js to build web applications.
+        - Another nested list is inside **Backend Development** for **Databases**, containing:
+            1. **MySQL**: A relational database management system.
+            2. **MongoDB**: A NoSQL database system for handling large amounts of unstructured data.
+
+    ### **Definition List**
+
+    A **definition list** is a list of terms and their corresponding definitions. It is represented in HTML using `<dl>` (definition list), `<dt>` (definition term), and `<dd>` (definition description) tags.
+
+    - **Terms and Descriptions**:
+    - **HTML**:
+        - **Term**: HyperText Markup Language.
+        - **Description**: It is the standard language used to create and structure web pages.
+    - **CSS**:
+        - **Term**: Cascading Style Sheets.
+        - **Description**: It is used to add styles like colors, fonts, and layout to HTML elements.
+    - **JavaScript**:
+        - **Term**: A programming language.
+        - **Description**: It allows you to create dynamic, interactive effects such as animations, form validations, and real-time updates on web pages.
     ---
     
     ### **2. IMAGE Tag (`<img>`)**
@@ -836,6 +872,7 @@
 
     ### Output of Code: 
     ![1](https://i.imgur.com/Qjgar8a.png)
+    ![3](https://i.imgur.com/MEnzw0N.png)
     ![2](https://i.imgur.com/0rnO2AW.png)
 
 </details>
