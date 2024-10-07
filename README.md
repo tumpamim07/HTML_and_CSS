@@ -635,7 +635,7 @@
     ![1](https://i.imgur.com/h1ElZcO.png)
 </details>
 <details>
-<summary>Day-04 (HTML List, Image & Iframe)</summary>
+<summary>Day 04 (HTML List, Image & Iframe)</summary>
    
 - 
     ### **1. LISTS in HTML**
@@ -874,5 +874,1378 @@
     ![1](https://i.imgur.com/Qjgar8a.png)
     ![3](https://i.imgur.com/MEnzw0N.png)
     ![2](https://i.imgur.com/0rnO2AW.png)
+
+</details>
+
+<details>
+    <summary>Day 05 (HTML Debugging, List, Anchor Tag, Div, Table, Form)</summary>
+    
+-   ## **Debugging**
+    
+    
+    - Inspect Element: Within the browser developer tools, the "Inspect Element" feature allows you to examine and modify the HTML structure in real-time. You can navigate through the document tree, view CSS styles, and experiment with changes to identify and fix layout or formatting issues.
+    - Use Comments: Insert comments (`<!-- ... -->`) within your HTML code to temporarily remove or isolate sections of code that might be causing issues. This helps you narrow down the problematic area and identify the source of the problem.
+    - After writing your html code you can check the validity on this website [https://validator.w3.org/](https://validator.w3.org/)
+    
+    ## **Lists in HTML with Attributes**
+    
+    Lists in HTML are used to group related items together. HTML provides various types of lists to represent different kinds of information: ordered lists, unordered lists, and definition lists. Each type of list has attributes that can modify its behavior or appearance. Here’s a detailed explanation of each type with relevant attributes:
+    
+    ### **Ordered List (`<ol>`)**
+    
+    An ordered list is created to list programming subjects. There are two `<ol>` tags:
+    
+    - The first list starts with items numbered 1, 2, and 3.
+    - The second list starts at number 4, containing links (both internal and external).
+    
+    **Key Code Snippet for Ordered List:**
+    
+    ```html
+    <h1>Subject List</h1>
+    <ol>
+        <li>C</li>
+        <li>C++</li>
+        <li>OOP</li>
+    </ol>
+    
+    ```
+    
+    ### **Unordered List (`<ul>`)**
+    
+    The unordered list is created using the `<ul>` tag, with each subject represented as an item in the list (`<li>`). The list contains three subjects:
+    
+    - PHP
+    - Java
+    - Web3
+    
+    An unordered list is used because there is no specific ranking or order of importance among the items.
+    
+    **Code Snippet:**
+    
+    ```html
+    <ul>
+        <li>PHP</li>
+        <li>Java</li>
+        <li>Web3</li>
+    </ul>
+    
+    ```
+    
+    - The `<ul>` element creates the list, and the `<li>` elements represent the individual items (subjects) in the list.
+    - Unordered lists typically display with bullet points.
+    
+    ---
+    
+    ### **Hyperlinks**
+    
+    Links are a fundamental aspect of web navigation, enabling users to move from one webpage to another or to different sections within a page. HTML uses anchor tags (`<a>`) to create hyperlinks. Here’s an in-depth look at links and navigation:
+    
+    ### **Attributes Used in Anchor Tags:**
+    
+    1. **`href`**:
+        - **Description:** Specifies the URL or file path that the link points to. It is required for all anchor tags.
+        - **Example:**
+            
+            ```html
+            <a href="list.html">Internal Hyperlink</a>
+            
+            ```
+            
+    2. **`target`**:
+        - **Description:** Specifies where to open the linked document. The common values are:
+            - `_blank`: Opens the link in a new tab or window.
+            - `_self`: Opens the link in the same tab or window (default behavior).
+            - `_parent`: Opens the link in the parent frame.
+            - `_top`: Opens the link in the full body of the window.
+        - **Example:**
+            
+            ```html
+            <a href="<https://github.com/tumpamim07>" target="_blank">External Hyperlink</a>
+            
+            ```
+            
+    3. **`title`** (Optional):
+        - **Description:** Provides additional information about the link, often displayed as a tooltip when the user hovers over the link.
+        - **Example:**
+            
+            ```html
+            <a href="list.html" title="View the list of subjects">Title of Hyperlink</a>
+            
+            ```
+            
+    4. **`download`** (Optional):
+        - **Description:** When added, the link will prompt the user to download the file instead of navigating to it. The value of this attribute can define the default file name.
+        - **Example:**
+            
+            ```html
+            <a href="html_tutorial.pdf">Download PDF</a>
+            ```
+            
+    5. **`type`** (Optional):
+        - **Description:** Specifies the media type of the linked document. This is helpful when linking to files other than HTML, such as images or documents.
+        - **Example:**
+            
+            ```html
+            <a href="image.png" type="image/png">Image Link</a>
+            
+            ```
+            
+    
+    ### **Full Example of Anchor Tag with All Attributes:**
+    
+    ```html
+    <ol start="4">
+          <li>
+            <a href="list.html" target="_blank">Internal Hyperlink</a> (<a
+              href="/accessible_table.html"
+              >Table</a
+            >
+            <a href="/directory/contact.html">Contact</a>
+            <a href="../Day-01 (HTML Tags & Attribute)/index.html"
+              >Other Directory</a
+            >) <br />
+          </li>
+    
+          <li>
+            <a href="https://github.com/tumpamim07" target="_blank"
+              >External Hyperlink</a
+            >
+          </li>
+          <li>
+            <a href="list.html" title="View the list of subjects"
+              >Title of Hyperlink</a
+            >
+          </li>
+          <li><a href="html_tutorial.pdf">Download PDF</a></li>
+          <li><a href="table.png" type="image/png">Image Link</a></li>
+        </ol>
+    ```
+    
+    ### Output of the Code
+    ![anchot tag](https://i.imgur.com/HdkGvLG.png)
+    
+    ### **Summary of Attributes:**
+    
+    - **`href`**: Specifies the URL or path of the linked document.
+    - **`target`**: Defines where to open the link (same window, new tab, etc.).
+    - **`title`**: Adds a tooltip that appears when hovering over the link.
+    - **`download`**: Prompts a download instead of navigating.
+    - **`type`**: Defines the media type of the linked file.
+    
+    These attributes allow you to customize how the link behaves and provides extra information for the user and browser.
+    
+    ### **`<div>` Elements with Inline Styling**
+    
+    Three `<div>` elements are used to create sections, each with a different background color, height, and width. Inline CSS is used for the following properties:
+    
+    - `background-color`: Sets the background color for each div.
+    - `height`: Specifies the height of each div (100px).
+    - `width`: Makes each div fill the entire width of the page (`100%`).
+    
+    **Key Code Snippet for `<div>` Elements:**
+    
+    ```html
+    <div id="div1" style="background-color: rgb(248, 121, 16); height: 100px; width: 100%;">
+        <p>Inside div 1</p>
+    </div>
+    
+    <div id="div2" style="background-color: rgb(140, 72, 247); height: 100px; width: 100%;">
+        <p>Inside div 2</p>
+    </div>
+    
+    <div id="div3" style="background-color: rgb(242, 116, 194); height: 100px; width: 100%;">
+        <p>Inside div 3</p>
+    </div>
+    
+    ```
+    
+    ### Output of the Code
+    ![index](https://i.imgur.com/XqLjVbW.png)
+    
+    ---
+    
+    ### Table
+    
+    ### **`<table>` Tag:**
+    
+    The `<table>` tag defines an HTML table. In this case, it contains student details, and it's styled using the `style` defined inside the `<head>` tag.
+    
+    **Code Snippet:**
+    
+    ```html
+    <table>
+        <caption>Student Details</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>GPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Urmi</td>
+                <td>3.98</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Nila</td>
+                <td>3.99</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Nira</td>
+                <td>3.74</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    ```
+    
+    ### **`<caption>` Tag:**
+    
+    The `<caption>` tag adds a title to the table. It is used to describe the content of the table, making it more accessible and readable. In this case, the caption is *"Student Details"*.
+    
+    **Code Snippet:**
+    
+    ```html
+    <caption>Student Details</caption>
+    
+    ```
+    
+    ### **`<thead>` Tag:**
+    
+    The `<thead>` tag is used to group the header content of the table. It contains the column headers, which provide a label for each column.
+    
+    **Code Snippet:**
+    
+    ```html
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>GPA</th>
+        </tr>
+    </thead>
+    
+    ```
+    
+    ### **`<tr>` Tag (Inside `<thead>`):**
+    
+    The `<tr>` tag defines a row in the table. In this case, it creates a single row for the column headers (ID, Name, GPA).
+    
+    **Code Snippet:**
+    
+    ```html
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>GPA</th>
+    </tr>
+    
+    ```
+    
+    ### **`<th>` Tag:**
+    
+    The `<th>` tag defines a header cell in the table. It is typically bold and centered by default. In this case, the `<th>` tags are used for the three column headers: ID, Name, and GPA.
+    
+    **Code Snippet:**
+    
+    ```html
+    <th>ID</th>
+    <th>Name</th>
+    <th>GPA</th>
+    
+    ```
+    
+    ### **`<tbody>` Tag:**
+    
+    The `<tbody>` tag groups the body content of the table, i.e., the actual data (rows) under the headers. Each row contains the student data.
+    
+    **Code Snippet:**
+    
+    ```html
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Urmi</td>
+            <td>3.98</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Nila</td>
+            <td>3.99</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Nira</td>
+            <td>3.74</td>
+        </tr>
+    </tbody>
+    
+    ```
+    
+    ### **`<tr>` Tag (Inside `<tbody>`):**
+    
+    Each `<tr>` tag inside the `<tbody>` tag represents a row of data for the students. Each row corresponds to one student's details, containing three cells: ID, Name, and GPA.
+    
+    **Code Snippet:**
+    
+    ```html
+    <tr>
+        <td>1</td>
+        <td>Urmi</td>
+        <td>3.98</td>
+    </tr>
+    
+    ```
+    
+    ### **`<td>` Tag:**
+    
+    The `<td>` tag defines a standard data cell in a table. It is used inside the `<tr>` tag to contain individual pieces of data. In this case, the data includes the student IDs, names, and GPAs.
+    
+    **Code Snippet:**
+    
+    ```html
+    <td>1</td>
+    <td>Urmi</td>
+    <td>3.98</td>
+    
+    ```
+    
+    ### Summary:
+    
+    - **`<table>`**: Defines the table structure.
+    - **`<caption>`**: Adds a title to the table.
+    - **`<thead>`**: Contains the table headers (`<th>` for each column).
+    - **`<tbody>`**: Contains the actual data rows (`<td>` for each cell).
+    - **`<tr>`**: Creates rows in the table.
+    - **`<td>` and `<th>`**: Define individual cells, with `<th>` used for headers and `<td>` for data.
+    
+    ### **CSS Styling Explanation (Applied to the Table Elements):**
+    
+    - **Table Style:**
+        - `border: 2px solid black;`: Adds a black border around the table and cells.
+        - `border-spacing: 15px;`: Adds 15px spacing between table cells.
+        - `height` and `width`: Set the table's dimensions.
+    - **`th, td` Style:**
+        - `padding: 15px;`: Adds padding inside the table cells to make the content more readable.
+        - `border: 2px solid black;`: Each cell has a 2px black border.
+    - **`tr` Style:**
+        - `text-align: center;`: Centers the text inside each row.
+    
+    ---
+    
+    ### **Complete Code:**
+    
+    Here’s the complete body of the table along with all the key tags described above:
+    
+    ```html
+    <body>
+        <!-- table -->
+        <table>
+            <caption>Student Details</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Urmi</td>
+                    <td>3.98</td>
+                </tr>
+    
+                <tr>
+                    <td>02</td>
+                    <td>Nila</td>
+                    <td>3.99</td>
+                </tr>
+    
+                <tr>
+                    <td>03</td>
+                    <td>Nira</td>
+                    <td>3.74</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    
+    ```
+    
+    ### Output of the Code
+    ![table](https://i.imgur.com/3eqhM0u.png)
+    
+    ---
+    
+    ### `colspan` and `rowspan` in HTML Tables
+    
+    ### 1. **`colspan`** (Column Span)
+    
+    The `colspan` attribute allows a cell to span across multiple columns.
+    
+    ### Example:
+    
+    Let's look at a table with the `colspan` attribute:
+    
+    ```html
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th colspan="2">Phone</th> <!-- spans across 2 columns -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Urmi</td>
+                <td>014</td>
+                <td>017</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Niya</td>
+                <td>013</td>
+                <td>017</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    ```
+    
+    - The table header `Phone` spans across two columns because of `colspan="2"`.
+    - This means that instead of having separate headers for each phone number, you have one `Phone` header that covers two data columns.
+    - The rows beneath it (`Urmi` and `Niya`) have two separate columns for phone numbers.
+    
+    ---
+    
+    ### 2. **`rowspan`** (Row Span)
+    
+    The `rowspan` attribute allows a cell to span across multiple rows.
+    
+    ### Example:
+    
+    Now, let's look at an example with `rowspan`:
+    
+    ```html
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th colspan="2">Phone</th> <!-- spans across 2 columns -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Urmi</td>
+                <td>014</td>
+                <td rowspan="3">017</td> <!-- spans across 3 rows -->
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Niya</td>
+                <td>013</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Rubi</td>
+                <td>014</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    ```
+    
+    - The cell containing the value `017` in the third column is using `rowspan="3"`, meaning it spans across 3 rows.
+    - So, instead of having the `017` value appear in each row individually, it appears only once and stretches across all three rows.
+    
+    ---
+    
+    ### Key Differences:
+    
+    - **`colspan`** is used when you want a cell to span multiple columns (horizontal stretching).
+    - **`rowspan`** is used when you want a cell to span multiple rows (vertical stretching).
+    
+    ### Example Visualization:
+    
+    If you visualize the table structure, the first table with `colspan` will look like this:
+    
+    For `rowspan`, the table looks like this:
+    
+    In this second table, `017` spans vertically across all three rows.
+    
+    ### Conclusion:
+    
+    - **`colspan`** is used to combine multiple columns under one cell.
+    - **`rowspan`** is used to combine multiple rows under one cell.
+    
+    ### Output of the Code
+    ![rowspan colspan](https://i.imgur.com/Qx9jor3.png)
+    
+    ---
+    
+    ### Accessible HTML Table
+    
+    Accessibility in web design ensures that websites are usable by people of all abilities and disabilities. An accessible table provides clear structure and semantics so screen readers and other assistive technologies can easily interpret the data.
+    
+    ### Key Components for Accessibility:
+    
+1. **`<caption>` Element**:
+    The `<caption>` element provides a description or title for the table. It helps screen readers understand the table's purpose.
+        
+    ```html
+        <caption>Students Info</caption>
+        
+    ```
+        
+    - This caption, "Students Info", gives context to what the table represents.
+
+2. **`<colgroup>` and `<col>`**:
+    The `<colgroup>` and `<col>` elements allow you to apply styles or properties to specific columns. This enhances readability and helps assistive technologies identify column structures.
+        
+    ```html
+        <colgroup>
+            <col span="3" style="background-color: burlywood;" />
+        </colgroup>
+        
+    ```
+        
+    - Here, the background color `burlywood` is applied to all three columns to help visually distinguish them. It improves clarity for users with visual impairments by providing a subtle visual cue.
+3. **`<th>` with `scope` Attribute**:
+    The `scope` attribute is used inside the `<th>` (table header) elements to explicitly define which cells the header refers to (columns or rows).
+        
+    ```html
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">GPA</th>
+            </tr>
+        </thead>
+        
+    ```
+        
+    - `scope="col"` tells assistive technologies that these headers apply to the columns. This is useful for visually impaired users using screen readers, allowing them to understand which header corresponds to which data in the columns.
+4. **Row Headers with `scope="row"`**:
+    The `<th>` tag is also used in the body of the table to identify row headers. These act as labels for the rows, and the `scope="row"` attribute ensures that screen readers associate the data cells in the row with this header.
+        
+    ```html
+        <tr>
+            <th scope="row">010</th>
+            <td>Urmi</td>
+            <td>3.99</td>
+        </tr>
+        
+    ```
+        
+    - `scope="row"` tells screen readers that this header applies to the row it is in, so users can easily follow the data.
+    
+    ### Explanation of Accessibility Features:
+    
+    1. **`<caption>`**: Provides context about the table for all users, particularly useful for screen readers.
+    2. **`scope="col"`**: Defines column headers, so screen readers know these headers apply to the columns.
+    3. **`scope="row"`**: Defines row headers, so assistive technologies can connect the row data with the appropriate header.
+    4. **`<colgroup>` and `<col>`**: Enhances readability by applying styles to entire columns.
+    
+    ### Benefits of Accessibility Features:
+    
+    - **Improved Usability**: By using proper headings and scopes, it ensures that all users, including those with disabilities, can navigate the table effectively.
+    - **Screen Reader Support**: These features provide clear navigation paths for screen readers, helping users identify relationships between headers and data cells.
+    - **Visual Distinction**: Applying styles like background colors can help users with visual impairments or color blindness to distinguish table sections more easily.
+    
+    ### Complete Code Example with Accessibility Features:
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accessible Table</title>
+    </head>
+    <body>
+        <header>
+            <h1>HTML Table</h1>
+        </header>
+        <main>
+            <table>
+                <caption>Students Info</caption> <!-- Table caption for description -->
+                <colgroup>
+                    <col span="3" style="background-color: burlywood;" /> <!-- Styling columns -->
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th> <!-- Column header with scope="col" -->
+                        <th scope="col">Name</th>
+                        <th scope="col">GPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">010</th> <!-- Row header with scope="row" -->
+                        <td>Urmi</td>
+                        <td>3.99</td>
+                    </tr>
+    
+                    <tr>
+                        <td scope="row">011</td>
+                        <td>Tonny</td>
+                        <td>3.55</td>
+                    </tr>
+    
+                    <tr>
+                        <td scope="row">010</td>
+                        <td>Laizu</td>
+                        <td>3.65</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+    </html>
+    ```
+    
+    ### Output of the Code
+    ![accessible_table](https://i.imgur.com/iCfeoPw.png)
+    
+    ---
+    
+    ### **Form Basics**
+    
+    Forms are essential for collecting user input on web pages. HTML provides a variety of elements to create forms and handle user input effectively. Here’s a detailed explanation of the form elements, input types, and form attributes:
+    
+    ### 1. **Text Input Field**
+    
+    ```html
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    
+    ```
+    
+    - **`<input type="text">`**: A single-line text box for inputting text.
+    - **`name`**: Identifies the input field for data submission.
+    - **`id`**: Used for the label to reference the input field.
+    
+    ---
+    
+    ### 2. **Password Input Field**
+    
+    ```html
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    
+    ```
+    
+    - **`<input type="password">`**: Masks the input with dots or asterisks, typically used for password entry.
+    
+    ---
+    
+    ### 3. **Email Input Field**
+    
+    ```html
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    
+    ```
+    
+    - **`<input type="email">`**: Ensures the input is in the format of an email (e.g., [name@example.com](mailto:name@example.com)).
+    
+    ---
+    
+    ### 4. **Date Input Field**
+    
+    ```html
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    
+    ```
+    
+    - **`<input type="date">`**: Provides a date picker interface for selecting a date.
+    
+    ---
+    
+    ### 5. **Radio Buttons**
+    
+    ```html
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    
+    ```
+    
+    - **`<input type="radio">`**: Allows users to select one option from a group. All radio buttons with the same `name` are grouped together.
+    
+    ---
+    
+    ### 6. **Checkboxes**
+    
+    ```html
+    <label>Choose your hobbies:</label>
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="traveling" name="hobby" value="traveling">
+    <label for="traveling">Traveling</label>
+    
+    ```
+    
+    - **`<input type="checkbox">`**: Lets users select multiple options.
+    
+    ---
+    
+    ### 7. **Dropdown (Select Menu)**
+    
+    ```html
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="us">USA</option>
+      <option value="uk">UK</option>
+      <option value="canada">Canada</option>
+    </select>
+    
+    ```
+    
+    - **`<select>`**: Defines a dropdown list.
+    - **`<option>`**: Defines the options inside the dropdown.
+    
+    ---
+    
+    ### 8. **Text Area**
+    
+    ```html
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    
+    ```
+    
+    - **`<textarea>`**: Used for multi-line text input, such as comments or descriptions.
+    
+    ---
+    
+    ### 9. **File Input**
+    
+    ```html
+    <label for="profile">Upload your profile picture:</label>
+    <input type="file" id="profile" name="profile">
+    
+    ```
+    
+    - **`<input type="file">`**: Allows users to upload files (e.g., images, documents).
+    
+    ---
+    
+    ### 10. **Submit Button**
+    
+    ```html
+    <input type="submit" value="Submit">
+    
+    ```
+    
+    - **`<input type="submit">`**: Submits the form data to the server.
+    
+    ---
+    
+    ### 11. **Reset Button**
+    
+    ```html
+    <input type="reset" value="Reset">
+    
+    ```
+    
+    - **`<input type="reset">`**: Resets all form fields to their default values.
+    
+    ---
+    
+    ### 12. **Button**
+    
+    ```html
+    <button type="button">Click Me</button>
+    
+    ```
+    
+    - **`<button>`**: Defines a clickable button, often used for JavaScript events or for submitting forms.
+    
+    ---
+    
+    ### **Example**
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Example</title>
+    </head>
+    <body>
+        <form action="submit.php" method="post">
+            <!-- Text Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+    
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+    
+            <!-- Date Input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <br><br>
+    
+            <!-- Radio Buttons -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+    
+            <!-- Checkbox -->
+            <label>Choose your hobbies:</label>
+            <input type="checkbox" id="reading" name="hobby" value="reading">
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="traveling" name="hobby" value="traveling">
+            <label for="traveling">Traveling</label>
+            <br><br>
+    
+            <!-- Dropdown -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="us">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">Canada</option>
+            </select>
+            <br><br>
+    
+            <!-- Text Area -->
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            <br><br>
+    
+            <!-- File Upload -->
+            <label for="profile">Upload your profile picture:</label>
+            <input type="file" id="profile" name="profile">
+            <br><br>
+    
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br><br>
+    
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+    
+            <!-- Reset Button -->
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+    </html>
+    ```
+    
+    **Common Input Types**:
+    
+    - `text`: Single-line text input.
+    - `password`: Password input (masked characters).
+    - `email`: Email address input.
+    - `number`: Numeric input.
+    - `date`: Date input.
+    - `checkbox`: Checkbox input
+    - `radio`: Radio button input.
+    - `submit`: Submit button.
+    - `reset`: Reset button.
+    
+    ---
+    
+    ### **Form Attributes**
+    
+    HTML form attributes define various behaviors and characteristics of a form element. Let's go through some of the most important form attributes with examples:
+    
+    ---
+    
+    ### 1. **`action` Attribute**
+    
+    - Specifies the URL where the form data will be sent upon submission.
+    
+    **Example:**
+    
+    ```html
+    <form action="/submit_form.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+    
+    ```
+    
+    - In this example, when the form is submitted, the data will be sent to `/submit_form.php`.
+    
+    ---
+    
+    ### 2. **`method` Attribute**
+    
+    - Defines how the form data should be submitted. The two common methods are:
+        - **`GET`**: Data is appended to the URL.
+        - **`POST`**: Data is sent as part of the HTTP request body (recommended for sensitive data).
+    
+    **Example:**
+    
+    ```html
+    <form action="/submit_form.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" value="Submit">
+    </form>
+    
+    ```
+    
+    - This form will use the **`POST`** method, which is better for security since the data is not visible in the URL.
+    
+    ---
+    
+    ### 3. **`enctype` Attribute**
+    
+    - Used when the form includes file uploads. It specifies how the form data should be encoded. The common value is **`multipart/form-data`**, which is necessary for file uploads.
+    
+    **Example:**
+    
+    ```html
+    <form action="/upload.php" method="post" enctype="multipart/form-data">
+        <label for="file">Choose a file:</label>
+        <input type="file" id="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    
+    ```
+    
+    - This form will allow users to upload a file.
+    
+    ---
+    
+    ### 4. **`target` Attribute**
+    
+    - Specifies where to display the response after the form is submitted.
+        - **`_self`**: Default, loads in the same tab.
+        - **`_blank`**: Opens in a new tab.
+        - **`_parent`**: Loads in the parent frame.
+        - **`_top`**: Loads in the full body of the window.
+    
+    **Example:**
+    
+    ```html
+    <form action="/submit_form.php" target="_blank">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+    
+    ```
+    
+    - The form response will be opened in a **new tab** (`_blank`).
+    
+    ---
+    
+    ### 5. **`autocomplete` Attribute**
+    
+    - Controls whether a form should automatically complete input fields based on the user's past inputs.
+        - **`on`**: Enables autocomplete (default).
+        - **`off`**: Disables autocomplete.
+    
+    **Example:**
+    
+    ```html
+    <form action="/submit_form.php" autocomplete="off">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <input type="submit" value="Submit">
+    </form>
+    
+    ```
+    
+    - The form's autocomplete is turned off, so the browser won't suggest previously entered values.
+    
+    ---
+    
+    ### 6. **`novalidate` Attribute**
+    
+    - Disables the HTML5 form validation that occurs when the form is submitted.
+    
+    **Example:**
+    
+    ```html
+    <form action="/submit_form.php" novalidate>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" value="Submit">
+    </form>
+    
+    ```
+    
+    - No form validation will be performed when this form is submitted, even if the input types (like email) require specific formats.
+    
+    ---
+    
+    ### 7. **`name` Attribute**
+    
+    - The `name` attribute defines the name of the form. This is helpful when the form is accessed via JavaScript.
+    
+    **Example:**
+    
+    ```html
+    <form name="registrationForm" action="/submit_form.php">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <input type="submit" value="Register">
+    </form>
+    
+    ```
+    
+    - In JavaScript, you can reference this form using `document.forms["registrationForm"]`.
+    
+    ---
+    
+    ### 8. **`accept-charset` Attribute**
+    
+    - Specifies the character encodings accepted by the server for form data submission.
+    
+    **Example:**
+    
+    ```html
+    <form action="/submit_form.php" accept-charset="UTF-8">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+    
+    ```
+    
+    - This form will ensure that the data is encoded in **UTF-8** before sending it to the server.
+    
+    ---
+    
+    ### Complete Form Example Using All Attributes:
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Attributes Example</title>
+    </head>
+    <body>
+        <h2>Register</h2>
+        <form action="/submit_form.php" method="post" enctype="multipart/form-data" target="_blank" autocomplete="on" accept-charset="UTF-8" name="registrationForm">
+            <!-- Text Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+    
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+    
+            <!-- File Upload -->
+            <label for="file">Upload your profile picture:</label>
+            <input type="file" id="file" name="file">
+            <br><br>
+    
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    </html>
+    
+    ```
+    
+    ### Explanation:
+    
+    - **`action="/submit_form.php"`**: Sends form data to this server-side script.
+    - **`method="post"`**: Data will be sent using the POST method.
+    - **`enctype="multipart/form-data"`**: Supports file uploads.
+    - **`target="_blank"`**: Opens the form result in a new tab.
+    - **`autocomplete="on"`**: Enables autocomplete for the form fields.
+    - **`accept-charset="UTF-8"`**: Ensures that the data is encoded in UTF-8.
+    - **`name="registrationForm"`**: Sets the form name for JavaScript interaction.
+    
+    ---
+    
+    ### Registration Form:
+    
+    This HTML code represents a **Registration Form** with various input fields such as text boxes, email input, file uploads, radio buttons, checkboxes, a dropdown menu, a text area, and password inputs. 
+    
+    ---
+    
+    ### 1. **Form Tag**
+    
+    ```html
+    <form action="">
+    
+    ```
+    
+    - The `<form>` element wraps all the input fields. The `action=""` attribute defines where to send form data when submitted. In this case, it’s empty, meaning no URL is specified.
+    
+    ---
+    
+    ### 2. **Username (Text Input)**
+    
+    ```html
+    <div>
+        <label for="fullname">Username: </label>
+        <input type="text" name="username" id="username" required readonly>
+    </div>
+    
+    ```
+    
+    - **`<label>`**: Associated with the input field via the `for` attribute to describe the purpose of the input.
+    - **`<input type="text">`**: Used to collect the username. It has two additional attributes:
+        - `required`: Ensures that the field must be filled before submitting.
+        - `readonly`: Makes the field non-editable by the user.
+    
+    ---
+    
+    ### 3. **Full Name (Text Input)**
+    
+    ```html
+    <div>
+        <label for="fullname">Full Name: </label>
+        <input type="text" name="fullname" id="fullname" required>
+    </div>
+    
+    ```
+    
+    - **`<input type="text">`**: Standard text input to collect the full name. The `required` attribute ensures that it must be filled.
+    
+    ---
+    
+    ### 4. **Email (Email Input)**
+    
+    ```html
+    <div>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+    </div>
+    
+    ```
+    
+    - **`<input type="email">`**: Input field for collecting email addresses. It ensures the user inputs a properly formatted email address.
+    
+    ---
+    
+    ### 5. **Date of Birth (Date Input)**
+    
+    ```html
+    <div>
+        <label for="dob">Date of Birth: </label>
+        <input type="date" name="dob" id="dob">
+    </div>
+    
+    ```
+    
+    - **`<input type="date">`**: Collects a date from the user using a date picker.
+    
+    ---
+    
+    ### 6. **Photo Upload (File Input)**
+    
+    ```html
+    <div>
+        <label for="photo">Choose Your Photo: </label>
+        <input type="file" name="photo" id="photo">
+    </div>
+    
+    ```
+    
+    - **`<input type="file">`**: Allows the user to upload a file, typically used for uploading images.
+    
+    ---
+    
+    ### 7. **Gender (Radio Buttons)**
+    
+    ```html
+    <div>
+        <label for="gender">Gender: </label>
+        <input type="radio" name="gender" id="gender" value="male">Male
+        <input type="radio" name="gender" id="gender" value="female">Female
+    </div>
+    
+    ```
+    
+    - **`<input type="radio">`**: Lets the user select one option from the given choices (male or female). Both radio buttons share the same `name` attribute (`gender`), so only one can be selected at a time.
+    
+    ---
+    
+    ### 8. **Religion (Checkboxes)**
+    
+    ```html
+    <div>
+        <label for="religion">Religion: </label>
+        <input checked type="checkbox" name="c1" id="muslim" value="muslim">Muslim
+        <input type="checkbox" name="c1" id="hindu" value="hindu">Hindu
+    </div>
+    
+    ```
+    
+    - **`<input type="checkbox">`**: Allows the user to select one or more options. The `checked` attribute makes the "Muslim" checkbox preselected.
+    
+    ---
+    
+    ### 9. **Department (Dropdown)**
+    
+    ```html
+    <div>
+        <label for="department">Department: </label>
+        <select name="department" id="department">
+            <option value="CSE">CSE</option>
+            <option selected value="EEE">EEE</option>
+            <option value="LLB">LLB</option>
+        </select>
+    </div>
+    
+    ```
+    
+    - **`<select>`**: Defines a dropdown menu, and the `<option>` tags inside define the options.
+    - **`selected`**: The option with `value="EEE"` is preselected when the form loads.
+    
+    ---
+    
+    ### 10. **Message (Text Area)**
+    
+    ```html
+    <div>
+        <label for="message">Message</label>
+        <textarea cols="20" rows="10" name="message" id="message"></textarea>
+    </div>
+    
+    ```
+    
+    - **`<textarea>`**: Creates a multi-line text input. The `cols` and `rows` attributes define the size of the text box.
+    
+    ---
+    
+    ### 11. **Password (Password Input)**
+    
+    ```html
+    <div>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+    </div>
+    
+    ```
+    
+    - **`<input type="password">`**: Used to collect passwords. The input characters will be masked (hidden) for security.
+    
+    ---
+    
+    ### 12. **Submit and Reset Buttons**
+    
+    ```html
+    <div>
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear" disabled>
+    </div>
+    
+    ```
+    
+    - **`<input type="submit">`**: Button to submit the form.
+    - **`<input type="reset">`**: Button to reset (clear) all form fields, but it is disabled with the `disabled` attribute, so it cannot be clicked.
+    
+    ---
+    
+    ### Complete Code Breakdown:
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+        <form action="">
+            <div>
+                <label for="fullname">Username: </label>
+                <input type="text" name="username" id="username" required readonly>
+            </div>
+            <br>
+            <div>
+                <label for="fullname">Full Name: </label>
+                <input type="text" name="fullname" id="fullname" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+            </div>
+            <br>
+            <div>
+                <label for="dob">Date of Birth: </label>
+                <input type="date" name="dob" id="dob">
+            </div>
+            <br>
+            <div>
+                <label for="photo">Choose Your Photo: </label>
+                <input type="file" name="photo" id="photo">
+            </div>
+            <br>
+            <div>
+                <label for="gender">Gender: </label>
+                <input type="radio" name="gender" id="gender" value="male">Male
+                <input type="radio" name="gender" id="gender" value="female">Female
+            </div>
+            <br>
+            <div>
+                <label for="religion">Religion: </label>
+                <input checked type="checkbox" name="c1" id="muslim" value="muslim">Muslim
+                <input type="checkbox" name="c1" id="hindu" value="hindu">Hindu
+            </div>
+            <br>
+            <div>
+                <label for="department">Department: </label>
+                <select name="department" id="department">
+                    <option value="CSE">CSE</option>
+                    <option selected value="EEE">EEE</option>
+                    <option value="LLB">LLB</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="message">Message</label>
+                <textarea cols="20" rows="10" name="message" id="message"></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password">
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Register">
+                <input type="reset" value="Clear" disabled>
+            </div>
+        </form>
+    </body>
+    </html>
+    
+    ```
+    ### Output of the Code
+    ![form](https://i.imgur.com/8W56nSQ.png)
+
+    ---
+    
+    This form covers a wide range of HTML input types (text, email, password, file, radio, checkbox, select, textarea). Each field uses relevant attributes (`required`, `readonly`, `checked`, etc.) to enhance functionality and user experience. The `submit` and `reset` buttons complete the form, though the reset button is disabled in this case.
 
 </details>
