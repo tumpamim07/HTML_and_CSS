@@ -2252,44 +2252,44 @@ HTML tags define the structure of the webpage. Attributes provide additional inf
 
 <details>
     <summary>Day-06 (Audio, Video & HTML5)</summary>
-        
+   
 - 
     In HTML, both the `<audio>` and `<video>` elements have several additional attributes beyond the basic ones like `src`, `controls`, and `type`. These attributes provide further control and customization of how media is presented and behaves on a webpage.
     
-### **Audio Tag: Additional Attributes**
+    ### **Audio Tag: Additional Attributes**
     
-- **`autoplay`**:
-    - Automatically plays the audio file when the page loads.
-    - Example:
+    1. **`autoplay`**:
+        - Automatically plays the audio file when the page loads.
+        - Example:
             
-        ```html
+            ```html
             <audio src="audio.mp3" autoplay controls></audio>
             
-        ```
+            ```
             
-- **`loop`**:
-    - The audio will replay from the beginning after it finishes.
-    - Example:
+    2. **`loop`**:
+        - The audio will replay from the beginning after it finishes.
+        - Example:
             
-        ```html
+            ```html
             <audio src="audio.mp3" loop controls></audio>
             
-        ```
+            ```
             
-- **`muted`**:
-    - Starts the audio in a muted state.
-    - Example:
+    3. **`muted`**:
+        - Starts the audio in a muted state.
+        - Example:
             
-    ```html
+            ```html
             <audio src="audio.mp3" muted controls></audio>
             
-    ```
+            ```
             
-- **`preload`**:
-    - Specifies how the audio file should be preloaded when the page loads. The possible values are:
-        - `none`: The audio file will not be preloaded.
-        - `metadata`: Only metadata (e.g., duration, file size) will be preloaded.
-        - `auto`: The entire audio file will be preloaded.
+    4. **`preload`**:
+        - Specifies how the audio file should be preloaded when the page loads. The possible values are:
+            - `none`: The audio file will not be preloaded.
+            - `metadata`: Only metadata (e.g., duration, file size) will be preloaded.
+            - `auto`: The entire audio file will be preloaded.
         - Example:
             
             ```html
@@ -2297,9 +2297,9 @@ HTML tags define the structure of the webpage. Attributes provide additional inf
             
             ```
             
-- **`volume`**:
-    - Sets the initial volume of the audio when it plays (value between `0.0` and `1.0`).
-    - Note: You cannot directly set this attribute in HTML but it can be modified using JavaScript.
+    5. **`volume`**:
+        - Sets the initial volume of the audio when it plays (value between `0.0` and `1.0`).
+        - Note: You cannot directly set this attribute in HTML but it can be modified using JavaScript.
     
     ### **Example Using All Attributes:**
     
@@ -2310,64 +2310,64 @@ HTML tags define the structure of the webpage. Attributes provide additional inf
     
     ---
     
-### **Video Tag: Additional Attributes**
+    ### **Video Tag: Additional Attributes**
     
-- **`autoplay`**:
-    - Automatically starts the video when the page loads.
-    - Example:
+    1. **`autoplay`**:
+        - Automatically starts the video when the page loads.
+        - Example:
             
-    ```html
+            ```html
             <video src="video.mp4" autoplay controls></video>
             
-    ```
+            ```
             
-- **`loop`**:
-    - The video will restart from the beginning once it finishes.
-    - Example:
+    2. **`loop`**:
+        - The video will restart from the beginning once it finishes.
+        - Example:
             
-        ```html
+            ```html
             <video src="video.mp4" loop controls></video>
             
-        ```
+            ```
             
-- **`muted`**:
-    - Starts the video with its sound muted.
-    - Example:
+    3. **`muted`**:
+        - Starts the video with its sound muted.
+        - Example:
             
-    ```html
+            ```html
             <video src="video.mp4" muted controls></video>
             
-    ```
+            ```
             
-- **`poster`**:
-    - Sets an image to display before the video starts playing or while it is downloading. If no `poster` is provided, the first frame of the video will be used.
-    - Example:
+    4. **`poster`**:
+        - Sets an image to display before the video starts playing or while it is downloading. If no `poster` is provided, the first frame of the video will be used.
+        - Example:
             
-    ```html
+            ```html
             <video src="video.mp4" poster="poster.jpg" controls></video>
             
-    ```
+            ```
             
-- **`preload`**:
-    - Similar to the audio element, it determines how the video should be preloaded. The values are:
-        - `none`: No video data will be preloaded.
-        - `metadata`: Only video metadata (duration, dimensions) is preloaded.
-        - `auto`: Entire video file is preloaded.
-    - Example:
+    5. **`preload`**:
+        - Similar to the audio element, it determines how the video should be preloaded. The values are:
+            - `none`: No video data will be preloaded.
+            - `metadata`: Only video metadata (duration, dimensions) is preloaded.
+            - `auto`: Entire video file is preloaded.
+        - Example:
             
-        ```html
+            ```html
             <video src="video.mp4" preload="metadata" controls></video>
             
-        ```
+            ```
             
-- **`height` and `width`**:
-    - Specifies the dimensions of the video.
-    - Example:
+    6. **`height` and `width`**:
+        - Specifies the dimensions of the video.
+        - Example:
             
-        ```html
+            ```html
             <video src="video.mp4" width="640" height="480" controls></video>
             
-        ```
+            ```
             
     
     ### **Example Using All Attributes:**
@@ -2379,104 +2379,105 @@ HTML tags define the structure of the webpage. Attributes provide additional inf
     
     ---
     
-### **Other Important Aspects**:
+    ### **Other Important Aspects**:
     
-### 1. **Multiple File Formats (Using Multiple `<source>` Elements)**:
+    ### 1. **Multiple File Formats (Using Multiple `<source>` Elements)**:
     
-Browsers support different video and audio formats. It is recommended to provide multiple formats so that all browsers can play the media. You can use multiple `<source>` tags inside `<audio>` or `<video>` tags to offer alternatives.
+    Browsers support different video and audio formats. It is recommended to provide multiple formats so that all browsers can play the media. You can use multiple `<source>` tags inside `<audio>` or `<video>` tags to offer alternatives.
     
-### Audio Example:
+    ### Audio Example:
     
-```html
+    ```html
     <audio controls>
       <source src="song.mp3" type="audio/mpeg">
       <source src="song.ogg" type="audio/ogg">
       Your browser does not support the audio tag.
     </audio>
     
-```
+    ```
     
-### Video Example:
-```html
+    ### Video Example:
+    
+    ```html
     <video controls>
-      source src="movie.mp4" type="video/mp4">
+      <source src="movie.mp4" type="video/mp4">
       <source src="movie.webm" type="video/webm">
       Your browser does not support the video tag.
     </video>
     
-```
+    ```
     
-### 2. **Fallback Content**:
+    ### 2. **Fallback Content**:
     
-In case the browser does not support HTML5 media, you can provide fallback content that will be displayed instead of the media.
+    In case the browser does not support HTML5 media, you can provide fallback content that will be displayed instead of the media.
     
-### Audio Fallback Example:
+    ### Audio Fallback Example:
     
-```html
+    ```html
     <audio controls>
       <source src="song.mp3" type="audio/mpeg">
       <source src="song.ogg" type="audio/ogg">
       Your browser does not support the audio element.
     </audio>
     
-```
+    ```
     
-### Video Fallback Example:
+    ### Video Fallback Example:
     
-```html
+    ```html
     <video controls>
       <source src="movie.mp4" type="video/mp4">
       <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video element.
     </video>
     
-```
+    ```
     
-### Controls
+    ### Controls
     
-The `controls` attribute in both the `<audio>` and `<video>` elements provides the user with the ability to interact with the media through a built-in set of controls. When one add the `controls` attribute, the browser automatically displays default UI elements such as:
+    The `controls` attribute in both the `<audio>` and `<video>` elements provides the user with the ability to interact with the media through a built-in set of controls. When one add the `controls` attribute, the browser automatically displays default UI elements such as:
     
-### For **Audio**:
+    ### For **Audio**:
     
-- **Play/Pause** button: Allows the user to start or stop the audio.
-- **Volume control**: Enables the user to adjust the volume of the audio.
-- **Seek bar**: Lets the user move to different parts of the audio (jump forward or backward).
-- **Current time and duration display**: Shows the current playback time and the total duration of the audio.
+    - **Play/Pause** button: Allows the user to start or stop the audio.
+    - **Volume control**: Enables the user to adjust the volume of the audio.
+    - **Seek bar**: Lets the user move to different parts of the audio (jump forward or backward).
+    - **Current time and duration display**: Shows the current playback time and the total duration of the audio.
     
-### For **Video**:
+    ### For **Video**:
     
-- **Play/Pause** button: Controls playback of the video (start and stop).
-- **Seek bar**: Allows the user to scrub through the video (move to specific points in the video timeline).
-- **Volume control**: Lets the user adjust the audio level.
-- **Fullscreen toggle**: Gives the user the ability to view the video in fullscreen mode.
-- **Current time and duration display**: Shows the time that has passed and the total length of the video.
+    - **Play/Pause** button: Controls playback of the video (start and stop).
+    - **Seek bar**: Allows the user to scrub through the video (move to specific points in the video timeline).
+    - **Volume control**: Lets the user adjust the audio level.
+    - **Fullscreen toggle**: Gives the user the ability to view the video in fullscreen mode.
+    - **Current time and duration display**: Shows the time that has passed and the total length of the video.
     
-### Example of Audio with Controls:
+    ### Example of Audio with Controls:
     
-```html
+    ```html
     <audio controls>
     		<source src="Crush - Beautiful.mp3" type="audio/mpeg">
     </audio>
-```
+    ```
     
-### Example of Video with Controls:
+    ### Example of Video with Controls:
     
-```html
+    ```html
     <video src="flower.mp4" width="500px" type="mp4" controls>Flower</video>
-```
+    ```
     
-### Semantic Tags in HTML5
+    ### Semantic Tags in HTML5
     
-HTML5 introduced semantic tags to improve the structure and meaning of the content. These tags provide better accessibility and search engine optimization (SEO). Below is a list of the most commonly used semantic tags:
+    HTML5 introduced semantic tags to improve the structure and meaning of the content. These tags provide better accessibility and search engine optimization (SEO). Below is a list of the most commonly used semantic tags:
     
-- `<header>`: Defines the header of a webpage or a section, usually containing navigational elements or introductory content.
-- `<nav>`: Used to contain a block of navigation links.
-- `<main>`: Represents the primary content of a document.
-- `<article>`: Represents self-contained content, such as a blog post or a news article.
-- `<section>`: Defines a standalone section of a webpage, often with a heading.
-- `<footer>`: Represents the footer of a section or the entire webpage, typically containing information like copyright notices or contact info.
+    - `<header>`: Defines the header of a webpage or a section, usually containing navigational elements or introductory content.
+    - `<nav>`: Used to contain a block of navigation links.
+    - `<main>`: Represents the primary content of a document.
+    - `<article>`: Represents self-contained content, such as a blog post or a news article.
+    - `<section>`: Defines a standalone section of a webpage, often with a heading.
+    - `<footer>`: Represents the footer of a section or the entire webpage, typically containing information like copyright notices or contact info.
     
-```html
+    ```html
     <header>
       <!-- Header content goes here -->
     </header>
@@ -2497,242 +2498,242 @@ HTML5 introduced semantic tags to improve the structure and meaning of the conte
       <!-- Footer content goes here -->
     </footer>
     
-```
-    
-### Advanced Form Input Types
-    
-HTML5 introduced new attributes and input types to enhance form capabilities. Here’s a quick overview of some advanced input types:
-    
-### 1. **`<input type="text">`**
-    
-- **Purpose**: Creates a single-line text input field.
-- **Usage**: For general text input.
-- **Example**:
-        
-    ```html
-    <input type="text" placeholder="Enter your name">
-    
     ```
+    
+    ### Advanced Form Input Types
+    
+    HTML5 introduced new attributes and input types to enhance form capabilities. Here’s a quick overview of some advanced input types:
+    
+    ### 1. **`<input type="text">`**
+    
+    - **Purpose**: Creates a single-line text input field.
+    - **Usage**: For general text input.
+    - **Example**:
+        
+        ```html
+        <input type="text" placeholder="Enter your name">
+        
+        ```
         
     
-### 2. **`<input type="email">`**
+    ### 2. **`<input type="email">`**
     
-- **Purpose**: Creates a single-line input field for email addresses.
-- **Validation**: It automatically checks if the entered email is in a valid format (e.g., contains "@" and ".").
-- **Example**:
+    - **Purpose**: Creates a single-line input field for email addresses.
+    - **Validation**: It automatically checks if the entered email is in a valid format (e.g., contains "@" and ".").
+    - **Example**:
         
-    ```html
+        ```html
         <input type="email" placeholder="Enter your email">
         
-    ```
+        ```
         
     
-### 3. **`<input type="password">`**
+    ### 3. **`<input type="password">`**
     
-- **Purpose**: Creates a single-line input field where the characters are hidden (usually replaced by dots or asterisks).
-- **Usage**: For password fields.
-- **Example**:
+    - **Purpose**: Creates a single-line input field where the characters are hidden (usually replaced by dots or asterisks).
+    - **Usage**: For password fields.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="password" placeholder="Enter your password">
         
-    ```
+        ```
         
     
-### 4. **`<input type="number">`**
+    ### 4. **`<input type="number">`**
     
- - **Purpose**: Creates a field for numeric input.
-- **Additional**: Can include attributes like `min`, `max`, and `step` to limit and define the range.
-- **Example**:
+    - **Purpose**: Creates a field for numeric input.
+    - **Additional**: Can include attributes like `min`, `max`, and `step` to limit and define the range.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="number" min="1" max="100" placeholder="Enter your age">
         
-    ```
+        ```
         
     
-### 5. **`<input type="checkbox">`**
+    ### 5. **`<input type="checkbox">`**
     
-- **Purpose**: Creates a checkbox that users can select or deselect.
-- **Usage**: For boolean options (e.g., "I agree to the terms").
-- **Example**:
+    - **Purpose**: Creates a checkbox that users can select or deselect.
+    - **Usage**: For boolean options (e.g., "I agree to the terms").
+    - **Example**:
         
-    ```html
+        ```html
         <input type="checkbox"> I agree to the terms
         
-    ```
+        ```
         
     
-### 6. **`<input type="radio">`**
+    ### 6. **`<input type="radio">`**
     
-- **Purpose**: Creates a radio button where users can select one option from a group.
-- **Usage**: Used when only one option out of several can be selected.
-- **Example**:
+    - **Purpose**: Creates a radio button where users can select one option from a group.
+    - **Usage**: Used when only one option out of several can be selected.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="radio" name="gender" value="male"> Male
         <input type="radio" name="gender" value="female"> Female
         
-    ```
+        ```
         
     
-### 7. **`<input type="button">`**
+    ### 7. **`<input type="button">`**
     
-- **Purpose**: Creates a clickable button, but it doesn’t have any functionality unless programmed (e.g., with JavaScript).
-- **Usage**: For general-purpose buttons that require custom behavior.
-- **Example**:
+    - **Purpose**: Creates a clickable button, but it doesn’t have any functionality unless programmed (e.g., with JavaScript).
+    - **Usage**: For general-purpose buttons that require custom behavior.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="button" value="Click me">
         
-    ```
+        ```
         
     
-### 8. **`<input type="submit">`**
+    ### 8. **`<input type="submit">`**
     
-- **Purpose**: Creates a button to submit a form.
-- **Behavior**: When clicked, it submits the form data to the server or the specified action.
-- **Example**:
+    - **Purpose**: Creates a button to submit a form.
+    - **Behavior**: When clicked, it submits the form data to the server or the specified action.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="submit" value="Submit">
         
-    ```
+        ```
         
     
-### 9. **`<input type="color">`**
+    ### 9. **`<input type="color">`**
     
-- **Purpose**: Creates a color picker that allows the user to choose a color.
-- **Example**:
+    - **Purpose**: Creates a color picker that allows the user to choose a color.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="color">
         
-    ```
+        ```
         
     
-### 10. **`<input type="date">`**
+    ### 10. **`<input type="date">`**
     
-- **Purpose**: Creates a date picker allowing users to select a date from a calendar.
-- **Example**:
+    - **Purpose**: Creates a date picker allowing users to select a date from a calendar.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="date">
         
-    ```
+        ```
         
     
-### 11. **`<input type="month">`**
+    ### 11. **`<input type="month">`**
     
- - **Purpose**: Creates a month picker, where users can select a specific month and year (no day).
-- **Example**:
+    - **Purpose**: Creates a month picker, where users can select a specific month and year (no day).
+    - **Example**:
         
-    ```html
+        ```html
         <input type="month">
         
-    ```
+        ```
         
     
-### 12. **`<input type="time">`**
+    ### 12. **`<input type="time">`**
     
-- **Purpose**: Creates a time picker where users can select a time (hours and minutes).
-- **Example**:
+    - **Purpose**: Creates a time picker where users can select a time (hours and minutes).
+    - **Example**:
         
-    ```html
+        ```html
         <input type="time">
         
-    ```
+        ```
         
     
-### 13. **`<input type="week">`**
+    ### 13. **`<input type="week">`**
     
-- **Purpose**: Creates a week picker, allowing the selection of a week and year (week number).
-- **Example**:
+    - **Purpose**: Creates a week picker, allowing the selection of a week and year (week number).
+    - **Example**:
         
-    ```html
+        ```html
         <input type="week">
         
-    ```
+        ```
         
     
-### 14. **`<input type="image">`**
+    ### 14. **`<input type="image">`**
     
-- **Purpose**: Creates a clickable image, which acts as a submit button for a form.
-- **Example**:
+    - **Purpose**: Creates a clickable image, which acts as a submit button for a form.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="image" src="submit.png" alt="Submit">
         
-    ```
+        ```
         
     
-### 15. **`<input type="file">`**
+    ### 15. **`<input type="file">`**
     
-- **Purpose**: Allows users to select a file from their device to upload.
- - **Usage**: Commonly used for file upload forms.
-- **Example**:
+    - **Purpose**: Allows users to select a file from their device to upload.
+    - **Usage**: Commonly used for file upload forms.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="file">
         
-    ```
+        ```
         
     
-### 16. **`<input type="url">`**
+    ### 16. **`<input type="url">`**
     
-- **Purpose**: Creates an input field for URLs, with built-in validation that checks for a valid URL format.
-- **Example**:
+    - **Purpose**: Creates an input field for URLs, with built-in validation that checks for a valid URL format.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="url" placeholder="Enter website URL">
         
-    ```
+        ```
         
     
-### 17. **`<input type="tel">`**
+    ### 17. **`<input type="tel">`**
     
-- **Purpose**: Creates a field for entering telephone numbers.
-- **Example**:
+    - **Purpose**: Creates a field for entering telephone numbers.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="tel" placeholder="Enter your phone number">
         
-    ```
+        ```
         
     
-### 18. **`<input type="search">`**
+    ### 18. **`<input type="search">`**
     
-- **Purpose**: Creates a search input field, designed for entering search terms.
-- **Example**:
+    - **Purpose**: Creates a search input field, designed for entering search terms.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="search" placeholder="Search...">
         
-    ```
+        ```
         
     
-### 19. **`<input type="hidden">`**
+    ### 19. **`<input type="hidden">`**
     
-- **Purpose**: Creates a hidden input field that is not visible to the user.
-- **Usage**: Useful for sending data to the server without displaying it on the page.
-- **Example**:
+    - **Purpose**: Creates a hidden input field that is not visible to the user.
+    - **Usage**: Useful for sending data to the server without displaying it on the page.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="hidden" value="12345">
         
-    ```
+        ```
         
     
-### 20. **`<input type="range">`**
+    ### 20. **`<input type="range">`**
     
-- **Purpose**: Creates a slider that allows users to select a value from a range.
-- **Attributes**: You can set the minimum and maximum values using `min` and `max` attributes.
-- **Example**:
+    - **Purpose**: Creates a slider that allows users to select a value from a range.
+    - **Attributes**: You can set the minimum and maximum values using `min` and `max` attributes.
+    - **Example**:
         
-    ```html
+        ```html
         <input type="range" min="0" max="100">
         
-    ```
+        ```
         
     
     ### **Code Example of Input Types:**
