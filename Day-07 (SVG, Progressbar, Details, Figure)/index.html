@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Svg & Progressbar</title>
-</head>
-<body>
-
+    <style>
+        details[open] > summary{
+            background-color: orange;
+        }
+    </style>
+  </head>
+  <body>
     <!-- svg -->
-    <img src="6b0f824d-44fa-452a-9132-361812002fd8.svg" alt="" width="100px">
-    <img src="40dfb5b2-90c4-4a2b-a940-707d99bdeeb7.svg" alt="" width="100px">
+    <img src="6b0f824d-44fa-452a-9132-361812002fd8.svg" alt="" width="100px" />
+    <img src="40dfb5b2-90c4-4a2b-a940-707d99bdeeb7.svg" alt="" width="100px" />
 
-    <br>
-    <br>
+    <br />
+    <br />
 
     <!-- Progressbar -->
-     <ul>
-        <li> HTML : <progress min="0" max="100" value="90"></progress> </li>
-        <li> CSS : <progress min="0" max="100" value="70"></progress></li>
-        <li> BootStrap : <progress min="0" max="100" value="20"></progress></li>
-     </ul>
-</body>
+    <ul>
+      <li>HTML : <progress min="0" max="100" value="90"></progress></li>
+      <li>CSS : <progress min="0" max="100" value="70"></progress></li>
+      <li>BootStrap : <progress min="0" max="100" value="20"></progress></li>
+    </ul>
+
+    <!-- Details & Summary -->
+    <details>
+      <summary>Summary Here</summary>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+      voluptates non vitae praesentium eum? Quis explicabo ad aliquam provident
+      ut unde, numquam optio perspiciatis incidunt hic reiciendis quasi quae
+      iure.
+    </details>
+
+    <!-- Figure -->
+     <figure>
+        <img src="accessible_table.png" alt="Table">
+        <figcaption>f1: Accessible Table</figcaption>
+     </figure>
+  </body>
 </html>
