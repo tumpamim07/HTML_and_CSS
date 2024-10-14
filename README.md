@@ -2907,3 +2907,139 @@ HTML tags define the structure of the webpage. Attributes provide additional inf
     ![1](https://i.imgur.com/wNT3hXj.png)
 
 </details>
+
+<details>
+    <summary>Day-07 (SVG, Progressbar, Details, Figure)</summary>
+    
+### 1. **SVG**
+    
+An SVG (Scalable Vector Graphics) is an XML-based format for images. It's used to define vector-based graphics, which can scale up or down without losing quality. In your HTML, you are using an `<img>` tag to display SVG images:
+    
+```html
+    <!-- SVG Images -->
+    <img src="6b0f824d-44fa-452a-9132-361812002fd8.svg" alt="SVG Image 1" width="100px" />
+    <img src="40dfb5b2-90c4-4a2b-a940-707d99bdeeb7.svg" alt="SVG Image 2" width="100px" />
+    
+```
+    
+The `width="100px"` attribute controls the size of the SVG displayed. The `alt` attribute provides a description for accessibility.
+    
+### 2. **Progressbar**
+    
+The `<progress>` element represents the completion progress of a task. It takes a minimum (`min`) and maximum (`max`) value, along with the current `value` attribute that shows how much of the task is completed.
+    
+```html
+    <!-- Progressbar -->
+    <ul>
+      <li>HTML : <progress min="0" max="100" value="90"></progress></li>
+      <li>CSS : <progress min="0" max="100" value="70"></progress></li>
+      <li>Bootstrap : <progress min="0" max="100" value="20"></progress></li>
+    </ul>
+    
+```
+    
+The `<progress>` element in HTML is used to display the completion progress of a task. It provides a visual representation of how much of the task has been completed relative to the total amount. It works by using three key attributes:
+    
+1. **`min`**: This sets the minimum value of the progress bar, typically `0`. It represents the starting point.
+2. **`max`**: This defines the maximum value of the progress bar, which is the total that represents 100% completion.
+3. **`value`**: This is the current progress or the amount that has been completed. The value should be between the `min` and `max` range.
+    
+### 3. **Details & Summary**
+    
+The `<details>` element is used to create a collapsible section. It contains a `<summary>` tag that acts as the clickable title for expanding or collapsing the content inside the details block.
+    
+```html
+    <!-- Details & Summary -->
+    <details>
+      <summary>Summary Here</summary>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates non vitae praesentium eum? Quis explicabo ad aliquam provident ut unde, numquam optio perspiciatis incidunt hic reiciendis quasi quae iure.
+    </details>
+    
+```
+    
+When you click the `Summary Here` text, it expands or collapses the content that follows it. You also have a CSS style applied to change the background color when the details are open:
+    
+```css
+    details[open] > summary {
+      background-color: orange;
+    }
+    
+```
+    
+This style will highlight the summary with an orange background when expanded.
+    
+### 4. **Figure & Figcaption**
+    
+The `<figure>` tag is used to group media content such as images, diagrams, or charts, along with an associated caption. The `<figcaption>` element provides a caption or description for the media inside the figure.
+    
+```html
+    <!-- Figure & Figcaption -->
+    <figure>
+      <img src="accessible_table.png" alt="Table">
+      <figcaption>f1: Accessible Table</figcaption>
+    </figure>
+```
+    
+### **`<figure>`**
+    
+- The `<figure>` tag is used to group media content and its caption.
+- It can contain various types of content like images, videos, code blocks, or diagrams, and it is semantically meaningful for grouping related content.
+- One key benefit of using `<figure>` is that the content inside it is self-contained, meaning it can be moved or repositioned in the document without losing context.
+    
+### **`<figcaption>`**
+    
+- The `<figcaption>` tag provides a caption or description for the media inside a `<figure>`.
+- It is placed either as the first or last child inside the `<figure>` element.
+    
+### Full Code:
+    
+```html
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Svg & Progressbar</title>
+        <style>
+            details[open] > summary{
+                background-color: orange;
+            }
+        </style>
+      </head>
+      <body>
+        <!-- svg -->
+        <img src="6b0f824d-44fa-452a-9132-361812002fd8.svg" alt="" width="100px" />
+        <img src="40dfb5b2-90c4-4a2b-a940-707d99bdeeb7.svg" alt="" width="100px" />
+    
+        <br />
+        <br />
+    
+        <!-- Progressbar -->
+        <ul>
+          <li>HTML : <progress min="0" max="100" value="90"></progress></li>
+          <li>CSS : <progress min="0" max="100" value="70"></progress></li>
+          <li>BootStrap : <progress min="0" max="100" value="20"></progress></li>
+        </ul>
+    
+        <!-- Details & Summary -->
+        <details>
+          <summary>Summary Here</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          voluptates non vitae praesentium eum? Quis explicabo ad aliquam provident
+          ut unde, numquam optio perspiciatis incidunt hic reiciendis quasi quae
+          iure.
+        </details>
+    
+        <!-- Figure -->
+         <figure>
+            <img src="accessible_table.png" alt="Table">
+            <figcaption>f1: Accessible Table</figcaption>
+         </figure>
+      </body>
+    </html>
+    
+```
+    
+### Output
+![1](https://i.imgur.com/5f3N0wv.png)    
+</details>
